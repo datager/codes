@@ -1,0 +1,6 @@
+{
+  "DBServiceConfig": {
+    "V5ConnStr": "host=15.234.39.105 port=25308 user=postgres password=Huawei@123 dbname=deepface_v5 sslmode=disable",
+    "SpecialConnStr": "host=15.234.39.105 port=25308 user=postgres password=Huawei@123 dbname=special sslmode=disable"
+  }
+}

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="59dd2a97-2f0c-4102-b825-10e5a0226080" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dg/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/VERSION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/configs/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/controller/org.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/controller/sensor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/controller/vehicleCapture.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/dbengine/dbPool.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/loglevel/prefix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/release.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/service/sensor/createSensor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/service/vehicle/insertVehicleCaptureIndex.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/sv_start.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/utils/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/utils/config/config_viper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dg/utils/random/random.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javacodes/flinktest/FlinkExample/src/main/java/xuwei/tech/streaming/sink/myTableSink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javacodes/flinktest/FlinkExample/src/main/java/xuwei/tech/streaming/streamAPI/BufferingSink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javacodes/flinktest/FlinkExample/src/main/java/xuwei/tech/streaming/streamAPI/CountWindowAverage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javacodes/flinktest/FlinkExample/src/main/java/xuwei/tech/streaming/streamAPI/TestCountWindowAverage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javacodes/flinktest/FlinkExample/src/main/java/xuwei/tech/table/SQLTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javacodes/flinktest/FlinkExample/src/main/java/xuwei/tech/table/TableAPISQL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javacodes/flinktest/FlinkProj/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/dbengine/engine.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/dbengine/engine.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/constants.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/constants.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/faceEvents.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/faceEvents.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/faces.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/faces.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/facesIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/facesIndex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/nonmotorCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/nonmotorCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/nonmotorIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/nonmotorIndex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/orgStructure.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/orgStructure.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/pedestrianCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/pedestrianCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/pedestrianIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/pedestrianIndex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/personFrequencyDetail.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/personFrequencyDetail.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/platformSyncGB.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/platformSyncGB.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/platformSyncOrg.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/platformSyncOrg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/sensors.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/sensors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/vehicleCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/vehicleCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/vehicleCaptureIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/vehicleCaptureIndex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/entities/vehicleEvents.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/entities/vehicleEvents.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/login/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/service/login/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/areaCollision.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/athenaTask.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/athenaTask.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/capturedFace.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/capturedFace.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/capturedFaceQuery.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/capturedFaceQuery.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/civilAttr.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/civilAttr.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/civilQuery.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/civilQuery.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/collisionTaskForAthena.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/concealTask.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/concealTask.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/constval.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/constval.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/error.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/faceCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/faceCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/faceEvent.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/faceEvent.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/faceRule.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/faceRule.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/nonmotorCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/nonmotorCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/org.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/org.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/pedestrianCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/pedestrianCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/personCollisionTask.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/sensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/sensor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/task.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/vehicleCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/vehicleCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/vehicleCollisionTask.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/models/vehicleEvent.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/models/vehicleEvent.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/org/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/service/org/createOrg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/org/orgcode.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/service/org/orgcode.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/org/orgcode1.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/service/org/orgcode1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/org/orgcode_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/service/org/orgcode_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/sensor/const.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/service/sensor/const.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/sensor/create.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/sensor/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/service/sensor/delete.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/sensor/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/service/sensor/get.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/task/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/service/task/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/utils/math.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dg/utils/uuid/uuid.go" beforeDir="false" afterPath="$PROJECT_DIR$/dg/utils/uuid/uuid1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../javacodes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../javacodes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tmp" beforeDir="false" afterPath="$PROJECT_DIR$/../tmp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dg/build.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dockertest/build.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="3" column="87" selection-start-line="3" selection-start-column="87" selection-end-line="3" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dockertest/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>MaxOrgLevel</find>
+    </findStrings>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.12.5/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/test.go" />
+        <option value="$PROJECT_DIR$/orgcode_test.go" />
+        <option value="$PROJECT_DIR$/orgcode.go" />
+        <option value="$PROJECT_DIR$/orgcode1.go" />
+        <option value="$PROJECT_DIR$/org/orgcode1.go" />
+        <option value="$PROJECT_DIR$/sensor/main.go" />
+        <option value="$PROJECT_DIR$/docker/main.go" />
+        <option value="$PROJECT_DIR$/docker/.gitignore" />
+        <option value="$PROJECT_DIR$/docker/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker/build.sh" />
+        <option value="$PROJECT_DIR$/docker/run.sh" />
+        <option value="$PROJECT_DIR$/dockertest/build.sh" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gocodes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gocodes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gocodes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gocodes" type="462c0819:PsiDirectoryNode" />
+              <item name="dockertest" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/org" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gocodes" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/docker/main.go" />
+      <package value="codes/gocodes" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build orgcode1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gocodes" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/orgcode1.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build orgcode.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gocodes" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/orgcode.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build test.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gocodes" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/test.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGetOrgCodesToBeAllocate in orgcode_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="gocodes" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/orgcode_test.go" />
+      <pattern value="^TestGetOrgCodesToBeAllocate$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build orgcode1.go" />
+        <item itemvalue="Go Build.go build orgcode.go" />
+        <item itemvalue="Go Test.TestGetOrgCodesToBeAllocate in orgcode_test.go" />
+        <item itemvalue="Go Build.go build test.go (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2725322" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="DB Browser" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32939634" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.22821577" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.30839896" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="DB Execution Console" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.6638054" visible="true" weight="0.33035713" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.33619457" side_tool="true" visible="true" weight="0.33035713" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Word Book" order="3" side_tool="true" />
+      <window_info anchor="right" id="make" order="4" />
+      <window_info anchor="right" id="SQL Formatter" order="5" />
+      <window_info anchor="right" id="Key Promoter X" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+    </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/org/orgcode1.go</url>
+          <line>52</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/org/orgcode_test.go" />
+    <entry file="file://$PROJECT_DIR$/org/test.go" />
+    <entry file="file://$PROJECT_DIR$/org/orgcode.go" />
+    <entry file="file://$PROJECT_DIR$/org/orgcode1.go" />
+    <entry file="file://$PROJECT_DIR$/sensor/main.go" />
+    <entry file="file://$PROJECT_DIR$/dg/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/main.go" />
+    <entry file="file://$PROJECT_DIR$/docker/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/docker/Dockerfile" />
+    <entry file="file://$PROJECT_DIR$/docker/build.sh" />
+    <entry file="file://$PROJECT_DIR$/docker/run.sh" />
+    <entry file="file://$PROJECT_DIR$/dg/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dockertest/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="87" selection-start-line="3" selection-start-column="87" selection-end-line="3" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dockertest/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

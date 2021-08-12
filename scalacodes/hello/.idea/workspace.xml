@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb4d55b9-b16b-4a17-b4c3-faad7220e9fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/VERSION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/configs/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/controller/org.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/controller/sensor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/controller/vehicleCapture.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/dbengine/dbPool.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/loglevel/prefix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/release.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/service/sensor/createSensor.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/service/vehicle/insertVehicleCaptureIndex.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/sv_start.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/utils/config/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/utils/config/config_viper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../gocodes/dg/utils/random/random.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_12_10_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/hello-build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/hello.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../flink/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../flink/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../flink/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../flink/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../flink/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../flink/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../flink/flink.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../flink/src/main/java/wikiedits/WikipediaAnalysis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/dbengine/engine.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/dbengine/engine.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/constants.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/constants.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/faceEvents.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/faceEvents.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/faces.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/faces.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/facesIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/facesIndex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/nonmotorCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/nonmotorCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/nonmotorIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/nonmotorIndex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/orgStructure.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/orgStructure.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/pedestrianCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/pedestrianCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/pedestrianIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/pedestrianIndex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/personFrequencyDetail.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/personFrequencyDetail.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/platformSyncGB.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/platformSyncGB.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/platformSyncOrg.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/platformSyncOrg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/sensors.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/sensors.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/vehicleCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/vehicleCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/vehicleCaptureIndex.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/vehicleCaptureIndex.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/entities/vehicleEvents.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/entities/vehicleEvents.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/login/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/service/login/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/areaCollision.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/athenaTask.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/athenaTask.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/capturedFace.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/capturedFace.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/capturedFaceQuery.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/capturedFaceQuery.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/civilAttr.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/civilAttr.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/civilQuery.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/civilQuery.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/collisionTaskForAthena.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/concealTask.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/concealTask.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/constval.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/constval.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/error.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/faceCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/faceCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/faceEvent.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/faceEvent.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/faceRule.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/faceRule.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/nonmotorCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/nonmotorCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/org.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/org.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/pedestrianCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/pedestrianCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/personCollisionTask.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/sensor.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/sensor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/task.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/vehicleCapture.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/vehicleCapture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/vehicleCollisionTask.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/models/vehicleEvent.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/models/vehicleEvent.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/org/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/service/org/createOrg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/org/orgcode.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/service/org/orgcode.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/org/orgcode1.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/service/org/orgcode1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/org/orgcode_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/service/org/orgcode_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/sensor/const.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/service/sensor/const.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/sensor/create.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/sensor/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/service/sensor/delete.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/sensor/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/service/sensor/get.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/task/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/service/task/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/utils/math.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gocodes/dg/utils/uuid/uuid.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gocodes/dg/utils/uuid/uuid1.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../javacodes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../javacodes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tmp" beforeDir="false" afterPath="$PROJECT_DIR$/../../tmp" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1Y8wE8Arf3HO5pjHB6Z0Xv4O63M" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="hello" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="root [file:/Users/sunyuchuan/go/src/codes/scalacodes/hello/]" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="hello-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/build.sbt" value="703518099" />
+        <entry key="$PROJECT_DIR$/project/build.properties" value="1244562550" />
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../javacodes/flinktest/ftest-scala/sbt-flink-scala" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../javacodes/flinktest/sbtflink" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb4d55b9-b16b-4a17-b4c3-faad7220e9fc" name="Default Changelist" comment="" />
+      <created>1582337414365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582337414365</updated>
+      <workItem from="1582337422567" duration="627000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

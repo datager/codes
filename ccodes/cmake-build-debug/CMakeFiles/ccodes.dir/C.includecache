@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sunyuchuan/go/src/codes/ccodes/main.c
+stdio.h
+-
+
+/Users/sunyuchuan/go/src/codes/ccodes/support.c
+stdio.h
+-
+

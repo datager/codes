@@ -1,0 +1,406 @@
+syntax = "proto3";
+
+package dg.model;
+
+import "common.proto";
+import "localcommon.proto";
+
+service SimilarityService {
+
+    // -特征库操作服务接口,实现库的CRUD操作
+    rpc RepoOperation (RankRepoOpRequest) returns (RankRepoOpResponse) {
+    }
+    // -特征操作服务接口, 实现特征的CRUD操作
+    rpc ObjectFeatureOperation (RankFeatureOpRequest) returns (RankFeatureOpResponse) {
+    }
+    // -特征比对服务接口, 实现特征相似度的比对服务
+    rpc RankFeature (RankFeatureRequest) returns (RankFeatureResponse) {
+    }
+
+    // Deprecated
+    // -特征添加服务接口, 向库内增加特征. 为保证兼容保留,不建议使用
+    rpc AddFeatures (AddFeaturesRequest) returns (AddFeaturesResponse) {
+    }
+
+    // -图片比对服务, 未实现
+    rpc RankImage (RankImageRequest) returns (RankImageResponse) {
+    }
+
+    // Deprecated
+    // -获取图片内容. 老接口, 不再使用
+    rpc GetImageContent (GetImageContentRequest) returns (GetImageContentResponse) {
+
+    }
+
+    // Deprecated
+    // -老接口, 不再使用
+    rpc Search (SearchRequest) returns (SearchResponse) {
+
+    }
+
+    // Deprecated
+    // -老接口, 不再使用
+    rpc RankRepoSize (RankRepoSizeRequest) returns (RankRepoSizeResponse) {
+
+    }
+
+    // Deprecated
+    // -老接口, 不再使用
+    rpc RankFeaturesPair (RankFeaturesPairRequest) returns (RankFeaturesPairResponse) {
+
+    }
+    // Deprecated
+    // -老接口, 不再使用
+    rpc GetRankedVector (FeatureRankingRequest) returns (FeatureRankingResponse) {
+    }
+
+
+}
+
+// -请求上下文
+message RankRequestContext {
+    // -请求Session, 调用者填写,会在返回时携带,用于唯一标示一次请求. 可为空
+    string SessionId = 1;
+    // -用户名信息，需要开启权限验证功能. 可为空
+    string UserName = 2;
+    // -Token信息，需要开启权限验证功能. 可为空
+    string Token = 3;
+    // -扩展参数
+    map<string, string> Params = 5;
+    // deprecated. 旧版本参数, 不再使用
+    RankType Type = 4; // Rank类型，车辆或人脸等
+}
+
+// -返回上下文
+message RankResponseContext {
+    // -响应Session，如果请求Session不存在，生成UUID，否则复制请求的Session
+    string SessionId = 1;
+    // -响应状态信息
+    string Status = 2;
+    // -状态为错误的响应错误信息
+    string Message = 3;
+    // -请求下发给Engine的时间
+    Time RequestTs = 4;
+    // -从Engine读取内容的时间
+    Time ResponseTs = 5;
+    // -Debug用时
+    map<string, Time> DebugTs = 6;
+}
+
+// -特征比对服务请求
+message RankFeatureRequest {
+    // -请求上下文
+    RankRequestContext Context = 1;
+    // -待比对的特征信息
+    ObjectProperty ObjectFeature = 3;
+    // -候选特征列表. 默认为空表示1:N比对, 不为空进行1:1或1:n比对
+    repeated ObjectProperty ObjectCandidates = 4;
+    // -比对参数列表, 可选值如下
+    // -ScoreThreshold, 数据类型为float, 指定比对分数的最小阈值, 小于该值不返回, 默认为0表示不过滤
+    // -MaxCandidates 数据类型为int, 指定返回Top K
+    // -PageSize 数据类型为int, 分页返回值, 指定每页大小. 默认为0表示不分页
+    // -PageIndex 数据类型为int, 分页页数
+    // -Normalization. 数据类型为bool, 指定是否需要对分数计算结果进行归一化处理. 默认为false
+    // -ShowAttributes. 数据类型为bool, 指定是否返回比对结果的详细属性,比如时间,地点等信息. 默认为false
+    // -FilterABC. 数据类型为int, 并可使用逗号分割传入多个值表示一个集合. 用于动态属性过滤, FliterABC表示过滤自定义的ABC属性, ABC属性值在传入的集合中
+    // -RangeXYZ. 数据类型为int-int, 表示一个值的范围. 用于动态属性过滤, FliterXYZ表示过滤自定义的XYZ属性, 属性值在传入的范围之间.
+    // -RepoId 必需. 数据类型为int, 指定在哪个库中进行比对.
+    // -Locations 必需. 数据类型为int, 并可使用逗号分割传入多个值. 比如"[1,2,3]"表示只在地点是1,2,3的特征中进行比对
+    // -StartTime 必需. 数据类型为int64.// -StartTime 必需. 数据类型为int64.
+    // -EndTime 必需. 数据类型为int64, 与StartTime配合使用,指定被特征的时间范围.
+    map<string, string> Params = 6;
+
+    // deprecated. 旧参数, 不再使用
+    int32 MaxCandidates = 5; // 比对输出条目限制（0为不限制）
+    // deprecated, 旧参数, 不再使用
+    FeatureVector Feature = 2; // not used
+}
+
+// -特征比对服务返回
+message RankFeatureResponse {
+    // -返回上下文
+    RankResponseContext Context = 1;
+    // -比对结果列表
+    repeated RankItem Candidates = 2;
+}
+
+// -库操作服务请求
+message RankRepoOpRequest {
+    // -请求上下文信息
+    RankRequestContext Context = 1;
+    // -库操作请求信息
+    RankRepoOperation Repo = 2;
+}
+// -库操作服务返回
+message RankRepoOpResponse {
+    // -返回上下文信息
+    RankResponseContext Context = 1;
+    // -库操作返回信息
+    repeated RankRepoOperation Repos = 2;
+}
+
+// -特征操作请求
+message RankFeatureOpRequest {
+    // -请求上下文
+    RankRequestContext Context = 1;
+    // -请求详细信息
+    RankFeatureOperation Features = 2;
+}
+
+// -特征操作返回
+message RankFeatureOpResponse {
+    // -返回上下文
+    RankResponseContext Context = 1;
+    // -返回详细信息
+    RankFeatureOperation Features = 2;
+}
+
+// -特征操作请求信息
+message RankFeatureOperation {
+    // -待操作特征所属于的库ID, 增加特征时必需.
+    string RepoId = 1;
+    // -操作类型, 增加, 删除, 更新或者查询
+    ObjectOperation Operation = 2;
+    // -特征列表. 可同时增加, 删除, 更新或者查询多条特征.
+    repeated ObjectProperty ObjectFeatures = 3;
+    // -可选参数. 暂时未使用
+    map<string, string> Params = 4;
+}
+
+// -特征操作具体信息
+message RankRepoOperation {
+    // -库ID, 必需. 增加库时需要保证唯一,否则返回错误. 其他操作需保证库ID存在, 否则返回错误
+    string RepoId = 1;
+    // -具体操作内容. 包括增加, 删除, 修改和查找
+    RepoOperation Operation = 2;
+    // -库级别. 在增加库和修改时必需, 其他操作不需要
+    RepoLevel Level = 3;
+    // -特征长度. 在增加库时必需且不可更新. 其他操作不需要
+    int32 FeatureLen = 4;
+    // -特征的数据类型, 目前包括float和short两种. 在增加库时必须且不可更新. 其他操作不需要.
+    FeatureDataType FeatureDataType = 5;
+    // -库容量. 如果库级别定义为REPO_LEVEL_ON_GPU, 在增加库时必需, 表明库的最大容量. 其他级别和操作时不需要.
+    int32 Capacity = 6;
+    // -库当前大小, 仅在查询时作为返回值使用
+    int32 Size = 7;
+    // -可选参数. 目前可用参数包括:
+    // -DynamicLoadNumber, 合法的数字型. 在库级别定义为REPO_LEVEL_ON_GPU时有效. 表明在启动时,按照数据新旧,最多加载到显存中的数据量
+    // -GPUThreads, [1,1,0,1]字符串格式. 在库级别定义为REPO_LEVEL_ON_GPU时必需. 表明数据在多个GPU上的分布. [1,1,0,1]表示当前服务器有三个GPU卡, 但是数据被平均存储在0,1和3号GPU卡上.
+    map<string, string> Params = 8;
+}
+
+// -比对结果项
+message RankItem {
+    // -特征Id
+    string Id = 1;
+    // -比对分数
+    float Score = 2;
+    // -特征所在库Id, 默认不返回
+    string RepoId = 7;
+    // -特征地点信息, 默认不返回
+    string Location = 8;
+    // -特征时间信息, 默认不返回
+    int64 Time = 9;
+    // -特征其他属性, 默认不返回
+    map<string, int32> Attributes = 6;
+
+    // deprecated. 旧版本, 不再使用
+    string Name = 3;
+    // deprecated. 旧版本, 不再使用
+    string URI = 4;
+    // deprecated. 旧版本, 不再使用
+    string Data = 5;
+}
+
+// -增加特征服务请求
+message AddFeaturesRequest {
+    // -请求上下文
+    RankRequestContext Context = 1;
+    // -待增加特征信息
+    repeated ObjectProperty ObjectFeatures = 2;
+}
+
+// -增加特征服务返回
+message AddFeaturesResponse {
+    // -返回上下文
+    RankResponseContext Context = 1;
+    repeated ObjectProperty ObjectFeatures = 2;
+}
+
+enum FeatureDataType {
+    FEATURE_DATA_TYPE_FLOAT = 0;
+    FEATURE_DATA_TYPE_SHORT = 1;
+}
+
+// -库操作类型, 分为增加, 删除, 更新和查找
+enum RepoOperation {
+    // -默认操作, 不可用
+    REPO_OPERATION_DEFAULT = 0;
+    // -增加一个新的库, 调用者需要保证库ID唯一
+    REPO_OPERATION_ADD = 1;
+    // -删除一个已存在的库
+    REPO_OPERATION_DELETE = 2;
+    // -更新一个已存在的库
+    REPO_OPERATION_UPDATE = 3;
+    // -查找一个或多个已存在的库
+    REPO_OPERATION_QUERY = 4;
+}
+
+// -特征操作类型, 分为增加, 删除, 更新和查找
+enum ObjectOperation {
+    // -默认操作, 不可用
+    OBJECT_OPERATION_DEFAULT = 0;
+    // -增加一个新特征, 调用者需要保证特征ID唯一
+    OBJECT_OPERATION_ADD = 1;
+    // -删除一个已存在的特征
+    OBJECT_OPERATION_DELETE = 2;
+    // -更新一个已存在的特征
+    OBJECT_OPERATION_UPDATE = 3;
+    // -查询一个或多个已存在的特征
+    OBJECT_OPERATION_QUERY = 4;
+}
+
+// -库的级别
+enum RepoLevel {
+    REPO_LEVEL_NOT_USED = 0;
+    // -数据主要存储在磁盘上, 在计算过程中会发生磁盘-内存间交换. 支持十亿级别的数据.
+    REPO_LEVEL_ON_STORAGE = 1;
+    // -未实现. 数组存储在内存上
+    REPO_LEVEL_ON_RAM = 2;
+    // -数据存储在GPU显存上, 在计算过程中直接使用, 不需要发生IO操作
+    REPO_LEVEL_ON_GPU = 3;
+    // -未实现. 数据部分在内存, 部分在磁盘
+    REPO_LEVEL_ON_RAM_STORAGE = 4;
+    // -未实现. 数据部分在显存, 部分在磁盘
+    REPO_LEVEL_ON_GPU_STORAGE = 5;
+    // -未实现. 数据部分在内存, 部分在显存
+    REPO_LEVEL_ON_RAM_GPU = 6;
+    // -未实现. 数据部分在内存, 部分在显存, 部分在磁盘
+    REPO_LEVEL_ON_RAM_GPU_STORAGE = 7;
+}
+
+// -特征属性
+message ObjectProperty {
+    // -特征ID, 唯一标示一个特征, 必需.
+    string Id = 1;
+    // -地点, 表示特征的地点信息. 在增加时必需. 更新时可选用于指定新值.
+    string Location = 4;
+    // -时间, 表示特征的时间信息. 在增加时必需. 更新时可选用于指定新值.
+    int64 Time = 5;
+    // -特征的BASE64表示. 在增加时必需. 更新时可选用于指定新值.
+    string Feature = 7;
+    // -特征的其他可选属性. Key为string类型, value为int32类型. Key如果不存在会自动创建. Key的总数量小于2^32
+    map<string, int32> Attributes = 9;
+
+    // 以下字段为保证兼容而保留,不再使用
+    // Decrepcated
+    int32 Type = 2;
+    // Decrepcated
+    ObjectOperation Operation = 3;
+    // Decrepcated
+    int32 Repository = 6;
+    // Decrepcated
+    map<string, string> Params = 8; // vehicle: Type, Color, Plates, is_front
+}
+
+
+message RankImageRequest {
+    RankRequestContext Context = 1;
+    Image Image = 2; //待比对图片信息
+    repeated Cutboard InterestedAreas = 3; //比对设置的感兴趣区域
+    repeated FeatureVector Candidates = 4; //待比对的特征列表
+    int32 MaxCandidates = 5; //比对输出条目限制（0为不限制）
+}
+
+message RankImageResponse {
+    RankResponseContext Context = 1;
+    repeated RankItem Candidates = 2;
+    //    repeated int64 Ids = 2; //比对返回的排序结果
+    //    repeated float Scores = 3; //比对返回的相关性分值
+}
+
+// Deprecated
+message RankRepoSizeRequest {
+    RankRepoContext Context = 1;
+}
+
+// Deprecated
+message RankRepoSizeResponse {
+    RankResponseContext Context = 1;
+    int32 Size = 2;
+}
+
+// Deprecated
+message RankFeaturesPairRequest {
+    RankRequestContext Context = 1;
+    FeatureVector Feature1 = 2; //特征1
+    FeatureVector Feature2 = 3; //特征2
+}
+
+// Deprecated
+message RankFeaturesPairResponse {
+    RankResponseContext Context = 1;
+    float Score = 2;
+    //    repeated RankItem Candidates = 2;
+    //    repeated int64 Ids = 2; //比对返回的排序结果
+    //    repeated float Scores = 3; //比对返回的相关性分值
+}
+
+// Deprecated
+message SearchRequest {
+    RankRequestContext Context = 1;
+    string Col = 2;
+    string Key = 3;
+}
+
+// Deprecated
+message SearchResponse {
+    RankResponseContext Context = 1;
+    repeated RankItem Results = 2;
+}
+
+// Deprecated
+message GetImageContentRequest {
+    string URI = 1;
+}
+
+// Deprecated
+message GetImageContentResponse {
+    string Data = 1;
+}
+
+// Deprecated
+message FeatureRankingRequest {
+    int64 ReqId = 1; //请求的Id
+    RecognizeType Type = 2; //
+    Image Image = 3; //待比对图片信息
+    repeated Cutboard InterestedAreas = 4; //比对设置的感兴趣区域
+    repeated Cutboard DisabledAreas = 5; //比对设置的禁用区域（当前不可用）
+    repeated FeatureVector Candidates = 6; //待比对的特征列表
+    int32 Limit = 7; //比对输出条目限制（0为不限制）
+}
+
+// Deprecated
+message FeatureRankingResponse {
+    int64 ReqId = 1; //比对返回的请求Id(对应请求的ReqId)
+    repeated int64 Ids = 2; //比对返回的排序结果
+    repeated float Scores = 3; //比对返回的相关性分值
+}
+
+// Deprecated
+message InfoAndFeature {
+    RankItem Info = 1;
+    FeatureVector Feature = 2;
+}
+// Deprecated
+message RankRepoContext {
+    int32 RepoId = 1;
+    ObjectOperation Operation = 2;
+    RepoLevel Level = 3;
+    int32 FeatureLen = 4;
+    string FeatureType = 5;
+    map<string, string> Params = 6;
+}
+
+
+

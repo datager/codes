@@ -1,0 +1,45 @@
+{
+  "Debug": false,
+  "LokiConfig": {
+    "Addr": "http://192.168.2.142:3000"
+  },
+  "FaceRepoInsertConfig": {
+    "ThreadNum": 100
+  },
+  "DBServiceConfig": {
+    "V5ConnStr": "host=192.168.2.47 port=5432 user=postgres password=Zstvgcs@9102 dbname=deepface_data sslmode=disable",
+    "StatisticsConnStr": "postgres://postgres:Zstvgcs@9102@192.168.2.142/statistics",
+    "SpecialConnStr": "postgres://postgres:Zstvgcs@9102@192.168.2.142/special",
+    "GaussTestTableName": "vehicle_capture_index",
+    "GaussTestTs": 1585724696000,
+    "Comment": "host=15.234.39.103 port=25308 user=postgres password=Huawei@123 dbname=deepface_v6 sslmode=disable",
+    "IsShowSQL": false,
+    "MaxOpenConnsPerClient": 40,
+    "MaxIdleConnsPerClient": 40,
+    "MaxLifeTimeSeconds": 0
+  },
+  "RedisServiceConfig": {
+    "Addr": "192.168.2.142:6379",
+    "Password": "",
+    "DB": 3
+  },
+  "CaptureConfig": {
+    "NumInsideOneInsertBatch": 2000,
+    "Concurrency": 300,
+    "Ts": {
+      "TsStart": 1581868800000,
+      "TsEnd": 1584288000000
+    },
+    "Sensor": {
+      "MinSensorIntID": 1,
+      "MaxSensorIntID": 11000
+    },
+    "CaptureNumToInsertOfOneSensor": 9091,
+    "URL": {
+      "VehicleURL": "http://192.168.2.142:8501/api/file/165,02a69376f875afd2",
+      "PedestrianURL": "",
+      "NonmotorURL": "",
+      "FaceURL": ""
+    }
+  }
+}

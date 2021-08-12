@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sunyuchuan/go/src/codes/cppcodes/find.h
+
+/Users/sunyuchuan/go/src/codes/cppcodes/main.cpp
+iostream
+-
+find.h
+/Users/sunyuchuan/go/src/codes/cppcodes/find.h
+
