@@ -2,8 +2,14 @@
   <div style="padding: 10px">
     <!--    功能区域-->
     <div style="margin: 10px 0">
-      <el-button type="primary" @click="add">新增</el-button>
-      <el-popconfirm title="确定删除吗？" @confirm="deleteBatch">
+      <el-button type="primary" @click="add" v-if="user.role === 1"
+        >新增</el-button
+      >
+      <el-popconfirm
+        v-if="user.role === 1"
+        title="确定删除吗？"
+        @confirm="deleteBatch"
+      >
         <template #reference>
           <el-button type="danger">批量删除</el-button>
         </template>
@@ -140,8 +146,8 @@ export default {
       pageSize: 10,
       total: 0,
       tableData: [],
-      filesUploadUrl: "http://localhost:9090/files/upload",
-      // "http://" + window.server.filesUploadUrl + ":9090/files/upload",
+      filesUploadUrl:
+        "http://" + window.server.filesUploadUrl + ":9090/files/upload",
       ids: [],
     };
   },
@@ -149,11 +155,14 @@ export default {
     let userStr = sessionStorage.getItem("user") || "{}";
     this.user = JSON.parse(userStr);
     // 请求服务端，确认当前登录用户的 合法信息
-    request.get("/user/" + this.user.id).then((res) => {
-      if (res.code === "0") {
-        this.user = res.data;
-      }
-    });
+    if (this.user != null && this.user.Id != undefined) {
+      console.log("book requestr-user");
+      request.get("/user/" + this.user.id).then((res) => {
+        if (res.code === "0") {
+          this.user = res.data;
+        }
+      });
+    }
 
     this.load();
   },

@@ -38,10 +38,14 @@ export default {
       if (!userJson) {
         return;
       }
-      let userId = JSON.parse(userJson).id;
-      request.get("/user/" + userId).then((res) => {
-        this.user = res.data;
-      });
+      let user = JSON.parse(userJson);
+      if (user != null && user.Id != undefined) {
+        console.log("aside requestr-user");
+
+        request.get("/user/" + userId).then((res) => {
+          this.user = res.data;
+        });
+      }
     },
   },
 };

@@ -146,7 +146,9 @@ export default {
 
           // 配置 server 接口地址
           editor.config.uploadImgServer =
-            "http://localhost:9090/files/editor/upload";
+            "http://" +
+            window.server.filesUploadUrl +
+            ":9090/files/editor/upload";
           editor.config.uploadFileName = "file"; // 设置上传参数名称
           editor.create();
         }

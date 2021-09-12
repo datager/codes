@@ -13,7 +13,7 @@
       <el-menu-item index="/map">百度地图</el-menu-item>
       <el-menu-item index="/im">聊天室</el-menu-item>
       <el-menu-item index="/message">在线留言</el-menu-item>
-      <el-sub-menu index="1">
+      <el-sub-menu index="1" v-if="user.role === 1">
         <template #title>系统管理</template>
         <el-menu-item index="/user">用户管理</el-menu-item>
       </el-sub-menu>
@@ -39,12 +39,15 @@ export default {
     let userStr = sessionStorage.getItem("user") || "{}";
     this.user = JSON.parse(userStr);
 
-    // 请求服务端，确认当前登录用户的 合法信息
-    request.get("/user/" + this.user.id).then((res) => {
-      if (res.code === "0") {
-        this.user = res.data;
-      }
-    });
+    if (this.user != null && this.user.id != undefined) {
+      console.log('aside requestr-user');
+      // 请求服务端，确认当前登录用户的 合法信息
+      request.get("/user/" + this.user.id).then((res) => {
+        if (res.code === "0") {
+          this.user = res.data;
+        }
+      });
+    }
   },
 };
 </script>
